@@ -26,9 +26,8 @@ Dijkstra’s algorithm finds shortest paths from the starting node to all nodes 
 However, the algorithm requires that there are no negative weight edges in the graph. Dijkstra’s algorithm maintains distances to the nodes and reduces them during the search. Dijkstra’s algorithm is efficient, because it only processes each edge in the graph once, using the fact that there are no negative edges.
 
 
-<p align="center">
-<img src="images/animation.gif" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/d6f58cfe-bf81-4cb6-9533-ba6dd679b5a2)
+
 
 
 <h3>
@@ -37,9 +36,8 @@ Example-</h3>
 Let us consider how Dijkstra’s algorithm works in the following graph when the
 starting node is node 1:
 
-<p align="center">
-<img src="images/1.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/29a0cd69-66c7-4cf7-8d45-6ffb74a78cbd)
+
 
 Initially the distance to the starting node is
 0 and the distance to all other nodes is infinite.
@@ -49,9 +47,8 @@ distance 0.
 When a node is selected, the algorithm goes through all edges that start at the node and reduces the distances using them:
 
 
-<p align="center">
-<img src="images/2.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/264e0bf4-b141-4505-8d15-150d73795e2c)
+
                         
 In this case, the edges from node 1 reduced the distances of nodes 2, 4 and 5,
 whose distances are now 5, 9 and 1.
@@ -59,26 +56,22 @@ whose distances are now 5, 9 and 1.
 The next node to be processed is node 5 with distance 1. This reduces the distance to node 4 from 9 to 3:
 
 
-<p align="center">
-<img src="images/3.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/6f5f45e0-7bac-47fa-acd4-31a5794b04a7)
+
 
                           
 After this, the next node is node 4, which reduces the  distance to node 3 to 9:
 
     
-<p align="center">
-<img src="images/4.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/6d1ddd29-c8e7-4af1-b5af-79d96bc8c34e)
 
 A remarkable property in Dijkstra’s algorithm is that whenever a node is selected, its distance is final. For example, at this point of the algorithm, the distances 0, 1 and 3 are the final distances to nodes 1, 5 and 4.
 
 After this, the algorithm processes the two remaining nodes, and the final distances are as follows:
 
 
-<p align="center">
-<img src="images/5.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/91ff9ae7-9865-4f91-baea-f2a6f5d62ee3)
+
 
 
 <h2>
@@ -92,9 +85,8 @@ In the following code, the priority queue q contains pairs of the form (-d, x), 
 
 Note that the priority queue contains negative distances to nodes. The reason for this is that the default version of the C++ priority queue finds maximum elements, while we want to find minimum elements. By using negative distances, we can directly use the default priority queue.
 
-<p align="center">
-<img src="images/dijkstra.png" class="center">
-  </p>
+![image](https://github.com/user-attachments/assets/c00a36e5-6ef0-4389-b7bb-18da45f34612)
+
  
 <h2>
 Time Complexity-</h2>
